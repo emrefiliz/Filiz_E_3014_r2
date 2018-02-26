@@ -1,0 +1,3 @@
+Generating and encrypting password:
+https://coderwall.com/p/m2hkiw/php-encrypt-decrypt-generate-random-passwords-with-mcrypt
+
