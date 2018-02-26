@@ -33,7 +33,7 @@
     <input type="password" name="password" value="">
 
     <br>
-    <input type="submit" name="submit" value="Show me the money">
+    <input type="submit" name="submit" value="Log me in">
   </form>
 
 </body>
