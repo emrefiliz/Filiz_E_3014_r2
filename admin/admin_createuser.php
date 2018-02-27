@@ -3,7 +3,7 @@
    // confirm_logged_in();
    if(isset($_POST['submit'])){
      $fname = trim($_POST['fname']);
-     $username = trim($_POST['username']);     
+     $username = trim($_POST['username']);
      $email = trim($_POST['email']);
      $lvllist = $_POST['lvllist'];
        if(empty($lvllist)){
@@ -11,23 +11,23 @@
        }else {
          $password = generatePassword();
          $crypted_password = encrypt("YOUR_PASSWORD", $password);
-         $result = createUser($fname, $username, $email,  $password, $lvllist);
+         $result = createUser($fname, $username, $email, $crypted_password, $lvllist);
          // decrypt
       //echo decrypt($crypted_password, $password);
       if($result = "User creation successful.") {
-        $to = $email;        
+        $to = $email;
         $from = "admin@test.com";
         $url = "http://localhost/admin/admin_login.php";
         $headers  = "From: " . $from;
         $subject  = "Welcome, " . $fname;
-        $message  = $fname.",\n\nYour account details are as below;\n\nUsername: ".$username."\nPassword: ".$password."\n\nPlease visit ".$url." to login.";        
+        $message  = $fname.",\n\nYour account details are as below;\n\nUsername: ".$username."\nPassword: ".$password."\n\nPlease visit ".$url." to login.";
         ///mail($to, $subject, $message , $headers);
-        }       
+        }
         $message = $result;
-       }  
-       
+       }
+
   }
- 
+
 
 ?>
 <!doctype html>
